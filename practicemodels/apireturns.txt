@@ -1,0 +1,68 @@
+{
+    "prediction": [
+        0,
+        1,
+        1,
+        1,
+        1
+    ],
+    "scoring": {
+        "f1_score": 0.5714285714285715
+    },
+    "summary_stats": {
+        "exited": {
+            "25%": 0.0,
+            "50%": 1.0,
+            "75%": 1.0,
+            "count": 26.0,
+            "max": 1.0,
+            "mean": 0.5769230769230769,
+            "min": 0.0,
+            "std": 0.5038314736557788
+        },
+        "lastmonth_activity": {
+            "25%": 16.75,
+            "50%": 73.0,
+            "75%": 100.75,
+            "count": 26.0,
+            "max": 1090.0,
+            "mean": 165.65384615384616,
+            "min": 0.0,
+            "std": 284.0332293669446
+        },
+        "lastyear_activity": {
+            "25%": 406.25,
+            "50%": 955.0,
+            "75%": 1615.5,
+            "count": 26.0,
+            "max": 10983.0,
+            "mean": 1502.923076923077,
+            "min": 18.0,
+            "std": 2192.64495845683
+        },
+        "number_of_employees": {
+            "25%": 7.25,
+            "50%": 14.0,
+            "75%": 34.5,
+            "count": 26.0,
+            "max": 103.0,
+            "mean": 26.884615384615383,
+            "min": 1.0,
+            "std": 31.35388578543581
+        }
+    },
+    "diagnostics": {
+        "dependency_check": "[{\"name\": \"alembic\", \"version\": \"1.8.1\", \"latest_version\": \"1.13.1\", \"latest_filetype\": \"wheel\"}, {\"name\": \"anyio\", \"version\": \"3.6.1\", \"latest_version\": \"4.2.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"argon2-cffi\", \"version\": \"21.3.0\", \"latest_version\": \"23.1.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"asttokens\", \"version\": \"2.0.8\", \"latest_version\": \"2.4.1\", \"latest_filetype\": \"wheel\"}, {\"name\": \"attrs\", \"version\": \"22.1.0\", \"latest_version\": \"23.1.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"Babel\", \"version\": \"2.10.3\", \"latest_version\": \"2.14.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"backports.functools-lru-cache\", \"version\": \"1.6.4\", \"latest_version\": \"2.0.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"beautifulsoup4\", \"version\": \"4.11.1\", \"latest_version\": \"4.12.2\", \"latest_filetype\": \"wheel\"}, {\"name\": \"bleach\", \"version\": \"5.0.1\", \"latest_version\": \"6.1.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"blinker\", \"version\": \"1.5\", \"latest_version\": \"1.7.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"cffi\", \"version\": \"1.15.1\", \"latest_version\": \"1.16.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"charset-normalizer\", \"version\": \"2.1.1\", \"latest_version\": \"3.3.2\", \"latest_filetype\": \"wheel\"}, {\"name\": \"click\", \"version\": \"7.1.2\", \"latest_version\": \"8.1.7\", \"latest_filetype\": \"wheel\"}, {\"name\": \"colorama\", \"version\": \"0.4.5\", \"latest_version\": \"0.4.6\", \"latest_filetype\": \"wheel\"}, {\"name\": \"conda-package-handling\", \"version\": \"1.9.0\", \"latest_version\": \"2.2.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"cryptography\", \"version\": \"38.0.1\", \"latest_version\": \"41.0.7\", \"latest_filetype\": \"wheel\"}, {\"name\": \"cycler\", \"version\": \"0.10.0\", \"latest_version\": \"0.12.1\", \"latest_filetype\": \"wheel\"}, {\"name\": \"debugpy\", \"version\": \"1.6.3\", \"latest_version\": \"1.8.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"executing\", \"version\": \"1.1.1\", \"latest_version\": \"2.0.1\", \"latest_filetype\": \"wheel\"}, {\"name\": \"fastjsonschema\", \"version\": \"2.16.2\", \"latest_version\": \"2.19.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"Flask\", \"version\": \"1.1.2\", \"latest_version\": \"3.0.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"flit_core\", \"version\": \"3.7.1\", \"latest_version\": \"3.9.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"greenlet\", \"version\": \"1.1.3\", \"latest_version\": \"3.0.2\", \"latest_filetype\": \"wheel\"}, {\"name\": \"gunicorn\", \"version\": \"20.0.4\", \"latest_version\": \"21.2.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"idna\", \"version\": \"3.4\", \"latest_version\": \"3.6\", \"latest_filetype\": \"wheel\"}, {\"name\": \"importlib-metadata\", \"version\": \"4.11.4\", \"latest_version\": \"7.0.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"importlib-resources\", \"version\": \"5.10.0\", \"latest_version\": \"6.1.1\", \"latest_filetype\": \"wheel\"}, {\"name\": \"ipykernel\", \"version\": \"6.16.0\", \"latest_version\": \"6.27.1\", \"latest_filetype\": \"wheel\"}, {\"name\": \"ipython\", \"version\": \"8.5.0\", \"latest_version\": \"8.12.3\", \"latest_filetype\": \"wheel\"}, {\"name\": \"itsdangerous\", \"version\": \"1.1.0\", \"latest_version\": \"2.1.2\", \"latest_filetype\": \"wheel\"}, {\"name\": \"jedi\", \"version\": \"0.18.1\", \"latest_version\": \"0.19.1\", \"latest_filetype\": \"wheel\"}, {\"name\": \"Jinja2\", \"version\": \"2.11.3\", \"latest_version\": \"3.1.2\", \"latest_filetype\": \"wheel\"}, {\"name\": \"joblib\", \"version\": \"1.0.1\", \"latest_version\": \"1.3.2\", \"latest_filetype\": \"wheel\"}, {\"name\": \"json5\", \"version\": \"0.9.5\", \"latest_version\": \"0.9.14\", \"latest_filetype\": \"wheel\"}, {\"name\": \"jsonschema\", \"version\": \"4.16.0\", \"latest_version\": \"4.20.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"jupyter_client\", \"version\": \"7.3.5\", \"latest_version\": \"8.6.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"jupyter_core\", \"version\": \"4.11.1\", \"latest_version\": \"5.5.1\", \"latest_filetype\": \"wheel\"}, {\"name\": \"jupyter-server\", \"version\": \"1.19.1\", \"latest_version\": \"2.12.1\", \"latest_filetype\": \"wheel\"}, {\"name\": \"jupyterhub\", \"version\": \"3.0.0\", \"latest_version\": \"4.0.2\", \"latest_filetype\": \"wheel\"}, {\"name\": \"jupyterlab\", \"version\": \"3.4.8\", \"latest_version\": \"4.0.9\", \"latest_filetype\": \"wheel\"}, {\"name\": \"jupyterlab-pygments\", \"version\": \"0.2.2\", \"latest_version\": \"0.3.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"jupyterlab_server\", \"version\": \"2.15.2\", \"latest_version\": \"2.25.2\", \"latest_filetype\": \"wheel\"}, {\"name\": \"kiwisolver\", \"version\": \"1.3.1\", \"latest_version\": \"1.4.5\", \"latest_filetype\": \"wheel\"}, {\"name\": \"Mako\", \"version\": \"1.2.3\", \"latest_version\": \"1.3.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"MarkupSafe\", \"version\": \"1.1.1\", \"latest_version\": \"2.1.3\", \"latest_filetype\": \"wheel\"}, {\"name\": \"matplotlib\", \"version\": \"3.3.4\", \"latest_version\": \"3.7.4\", \"latest_filetype\": \"wheel\"}, {\"name\": \"mistune\", \"version\": \"2.0.4\", \"latest_version\": \"3.0.2\", \"latest_filetype\": \"wheel\"}, {\"name\": \"nbclassic\", \"version\": \"0.4.5\", \"latest_version\": \"1.0.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"nbclient\", \"version\": \"0.7.0\", \"latest_version\": \"0.9.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"nbconvert\", \"version\": \"7.2.1\", \"latest_version\": \"7.13.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"nbformat\", \"version\": \"5.6.1\", \"latest_version\": \"5.9.2\", \"latest_filetype\": \"wheel\"}, {\"name\": \"nest-asyncio\", \"version\": \"1.5.6\", \"latest_version\": \"1.5.8\", \"latest_filetype\": \"wheel\"}, {\"name\": \"notebook\", \"version\": \"6.4.12\", \"latest_version\": \"7.0.6\", \"latest_filetype\": \"wheel\"}, {\"name\": \"notebook-shim\", \"version\": \"0.1.0\", \"latest_version\": \"0.2.3\", \"latest_filetype\": \"wheel\"}, {\"name\": \"numpy\", \"version\": \"1.20.1\", \"latest_version\": \"1.24.4\", \"latest_filetype\": \"wheel\"}, {\"name\": \"oauthlib\", \"version\": \"3.2.1\", \"latest_version\": \"3.2.2\", \"latest_filetype\": \"wheel\"}, {\"name\": \"packaging\", \"version\": \"21.3\", \"latest_version\": \"23.2\", \"latest_filetype\": \"wheel\"}, {\"name\": \"pamela\", \"version\": \"1.0.0\", \"latest_version\": \"1.1.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"pandas\", \"version\": \"1.2.2\", \"latest_version\": \"2.0.3\", \"latest_filetype\": \"wheel\"}, {\"name\": \"pexpect\", \"version\": \"4.8.0\", \"latest_version\": \"4.9.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"Pillow\", \"version\": \"8.1.0\", \"latest_version\": \"10.1.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"pip\", \"version\": \"22.2.2\", \"latest_version\": \"23.3.2\", \"latest_filetype\": \"wheel\"}, {\"name\": \"prometheus-client\", \"version\": \"0.14.1\", \"latest_version\": \"0.19.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"prompt-toolkit\", \"version\": \"3.0.31\", \"latest_version\": \"3.0.43\", \"latest_filetype\": \"wheel\"}, {\"name\": \"psutil\", \"version\": \"5.9.2\", \"latest_version\": \"5.9.7\", \"latest_filetype\": \"wheel\"}, {\"name\": \"pycosat\", \"version\": \"0.6.3\", \"latest_version\": \"0.6.6\", \"latest_filetype\": \"sdist\"}, {\"name\": \"pycurl\", \"version\": \"7.45.1\", \"latest_version\": \"7.45.2\", \"latest_filetype\": \"sdist\"}, {\"name\": \"Pygments\", \"version\": \"2.13.0\", \"latest_version\": \"2.17.2\", \"latest_filetype\": \"wheel\"}, {\"name\": \"PyJWT\", \"version\": \"2.5.0\", \"latest_version\": \"2.8.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"pyOpenSSL\", \"version\": \"22.0.0\", \"latest_version\": \"23.3.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"pyparsing\", \"version\": \"2.4.7\", \"latest_version\": \"3.1.1\", \"latest_filetype\": \"wheel\"}, {\"name\": \"pyrsistent\", \"version\": \"0.18.1\", \"latest_version\": \"0.20.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"python-dateutil\", \"version\": \"2.8.1\", \"latest_version\": \"2.8.2\", \"latest_filetype\": \"wheel\"}, {\"name\": \"python-json-logger\", \"version\": \"2.0.1\", \"latest_version\": \"2.0.7\", \"latest_filetype\": \"wheel\"}, {\"name\": \"pytz\", \"version\": \"2021.1\", \"latest_version\": \"2023.3.post1\", \"latest_filetype\": \"wheel\"}, {\"name\": \"pyzmq\", \"version\": \"24.0.1\", \"latest_version\": \"25.1.2\", \"latest_filetype\": \"wheel\"}, {\"name\": \"requests\", \"version\": \"2.28.1\", \"latest_version\": \"2.31.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"ruamel.yaml\", \"version\": \"0.17.21\", \"latest_version\": \"0.18.5\", \"latest_filetype\": \"wheel\"}, {\"name\": \"ruamel.yaml.clib\", \"version\": \"0.2.6\", \"latest_version\": \"0.2.8\", \"latest_filetype\": \"wheel\"}, {\"name\": \"scikit-learn\", \"version\": \"0.24.1\", \"latest_version\": \"1.3.2\", \"latest_filetype\": \"wheel\"}, {\"name\": \"scipy\", \"version\": \"1.6.1\", \"latest_version\": \"1.10.1\", \"latest_filetype\": \"wheel\"}, {\"name\": \"seaborn\", \"version\": \"0.11.1\", \"latest_version\": \"0.13.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"Send2Trash\", \"version\": \"1.8.0\", \"latest_version\": \"1.8.2\", \"latest_filetype\": \"wheel\"}, {\"name\": \"setuptools\", \"version\": \"65.4.1\", \"latest_version\": \"69.0.2\", \"latest_filetype\": \"wheel\"}, {\"name\": \"six\", \"version\": \"1.15.0\", \"latest_version\": \"1.16.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"sklearn\", \"version\": \"0.0\", \"latest_version\": \"0.0.post12\", \"latest_filetype\": \"sdist\"}, {\"name\": \"soupsieve\", \"version\": \"2.3.2.post1\", \"latest_version\": \"2.5\", \"latest_filetype\": \"wheel\"}, {\"name\": \"SQLAlchemy\", \"version\": \"1.4.41\", \"latest_version\": \"2.0.23\", \"latest_filetype\": \"wheel\"}, {\"name\": \"stack-data\", \"version\": \"0.5.1\", \"latest_version\": \"0.6.3\", \"latest_filetype\": \"wheel\"}, {\"name\": \"terminado\", \"version\": \"0.16.0\", \"latest_version\": \"0.18.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"threadpoolctl\", \"version\": \"2.1.0\", \"latest_version\": \"3.2.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"tinycss2\", \"version\": \"1.1.1\", \"latest_version\": \"1.2.1\", \"latest_filetype\": \"wheel\"}, {\"name\": \"tornado\", \"version\": \"6.2\", \"latest_version\": \"6.4\", \"latest_filetype\": \"wheel\"}, {\"name\": \"tqdm\", \"version\": \"4.64.1\", \"latest_version\": \"4.66.1\", \"latest_filetype\": \"wheel\"}, {\"name\": \"traitlets\", \"version\": \"5.4.0\", \"latest_version\": \"5.14.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"typing_extensions\", \"version\": \"4.4.0\", \"latest_version\": \"4.9.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"urllib3\", \"version\": \"1.26.11\", \"latest_version\": \"2.1.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"wcwidth\", \"version\": \"0.2.5\", \"latest_version\": \"0.2.12\", \"latest_filetype\": \"wheel\"}, {\"name\": \"websocket-client\", \"version\": \"1.4.1\", \"latest_version\": \"1.7.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"Werkzeug\", \"version\": \"1.0.1\", \"latest_version\": \"3.0.1\", \"latest_filetype\": \"wheel\"}, {\"name\": \"wheel\", \"version\": \"0.37.1\", \"latest_version\": \"0.42.0\", \"latest_filetype\": \"wheel\"}, {\"name\": \"zipp\", \"version\": \"3.9.0\", \"latest_version\": \"3.17.0\", \"latest_filetype\": \"wheel\"}]\n",
+        "missing_data_percent": {
+            "corporation": 0.0,
+            "exited": 0.0,
+            "lastmonth_activity": 0.0,
+            "lastyear_activity": 0.0,
+            "number_of_employees": 0.0
+        },
+        "timing": {
+            "ingestion_time": 0.005902964003325906,
+            "training_time": 0.003622532000008505
+        }
+    }
+}
