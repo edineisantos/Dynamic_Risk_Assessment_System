@@ -8,16 +8,34 @@ from sklearn import metrics
 with open('config.json', 'r') as f:
     config = json.load(f)
 
-test_data_path = os.path.join(config['test_data_path'], 'testdata.csv')
-model_path = os.path.join(config['output_model_path'], 'trainedmodel.pkl')
-score_path = os.path.join(config['output_model_path'], 'latestscore.txt')
+model_folder_path = config['output_model_path']
+test_data_folder_path = config['test_data_path']
+
+# Default filenames for the model and test data
+default_model_filename = 'trainedmodel.pkl'
+default_test_data_filename = 'testdata.csv'
 
 # Function for model scoring
 
 
-def score_model():
-    # Load the trained model from 'trainedmodel.pkl'
-    with open(model_path, 'rb') as model_file:
+def score_model(trained_model=None, test_data_filename=None):
+    # If trained_model or test_data_filename is not provided,
+    # use default values
+    if trained_model is None:
+        trained_model_path = os.path.join(model_folder_path,
+                                          default_model_filename)
+    else:
+        trained_model_path = os.path.join(model_folder_path, trained_model)
+
+    if test_data_filename is None:
+        test_data_path = os.path.join(test_data_folder_path,
+                                      default_test_data_filename)
+    else:
+        test_data_path = os.path.join(test_data_folder_path,
+                                      test_data_filename)
+
+    # Load the trained model
+    with open(trained_model_path, 'rb') as model_file:
         trained_model = pickle.load(model_file)
 
     # Load test data
@@ -35,6 +53,7 @@ def score_model():
     f1_score = metrics.f1_score(y_test, y_pred)
 
     # Write the F1 score to 'latestscore.txt'
+    score_path = os.path.join(model_folder_path, 'latestscore.txt')
     with open(score_path, 'w') as score_file:
         score_file.write(str(f1_score))
 
