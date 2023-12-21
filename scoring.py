@@ -18,24 +18,19 @@ default_test_data_filename = 'testdata.csv'
 # Function for model scoring
 
 
-def score_model(trained_model=None, test_data_filename=None):
+def score_model(trained_model=None, test_data_path=None):
     # If trained_model or test_data_filename is not provided,
     # use default values
     if trained_model is None:
-        trained_model_path = os.path.join(model_folder_path,
+        trained_model = os.path.join(model_folder_path,
                                           default_model_filename)
-    else:
-        trained_model_path = os.path.join(model_folder_path, trained_model)
 
-    if test_data_filename is None:
+    if test_data_path is None:
         test_data_path = os.path.join(test_data_folder_path,
                                       default_test_data_filename)
-    else:
-        test_data_path = os.path.join(test_data_folder_path,
-                                      test_data_filename)
 
     # Load the trained model
-    with open(trained_model_path, 'rb') as model_file:
+    with open(trained_model, 'rb') as model_file:
         trained_model = pickle.load(model_file)
 
     # Load test data
@@ -56,6 +51,8 @@ def score_model(trained_model=None, test_data_filename=None):
     score_path = os.path.join(model_folder_path, 'latestscore.txt')
     with open(score_path, 'w') as score_file:
         score_file.write(str(f1_score))
+    
+    return f1_score
 
 
 if __name__ == '__main__':
