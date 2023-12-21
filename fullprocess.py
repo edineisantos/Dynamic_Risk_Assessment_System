@@ -2,6 +2,7 @@ import os
 import sys
 import json
 from ingestion import merge_multiple_dataframe
+from scoring import score_model
 
 # Load config.json and get environment variables
 with open('config.json', 'r') as f:
@@ -10,6 +11,8 @@ with open('config.json', 'r') as f:
 prod_deployment_path = config['prod_deployment_path']
 input_folder_path = config['input_folder_path']
 ingested_files_path = os.path.join(prod_deployment_path, 'ingestedfiles.txt')
+model_folder_path = config['output_model_path']
+output_folder_path = config['output_folder_path']
 
 # Function to check for new data
 def check_for_new_data():
@@ -45,7 +48,6 @@ def ingest_new_data():
         print("Ingesting new data...")
         merge_multiple_dataframe()
         print("Ingestion completed.")
-        new_data = True
     else:
         print("No new data found.")
         print("Terminating process.")
@@ -53,12 +55,36 @@ def ingest_new_data():
 
 # Checking for model drift
 #check whether the score from the deployed model is different from the score from the model that uses the newest ingested data
+# Function to check for model drift
+def check_for_model_drift():
+    # Read the latest recorded score
+    latest_score_path = os.path.join(prod_deployment_path, 'latestscore.txt')
+    print("Latest score file path:", latest_score_path)
+    if os.path.exists(latest_score_path):
+        with open(latest_score_path, 'r') as latest_score_file:
+            latest_score = float(latest_score_file.read().strip())
+    else:
+        print("Latest score file not found.")
+        sys.exit()
 
+    print("Latest recorded score:", latest_score)
 
-# Deciding whether to proceed, part 2
-#if you found model drift, you should proceed. otherwise, do end the process here
+    # Run scoring on the new data
+    test_data_path = os.path.join(output_folder_path, 'finaldata.csv')
+    print("Test data path:", test_data_path)
+    production_model = os.path.join(prod_deployment_path, 'trainedmodel.pkl')
+    print("Production model path:", production_model)
+    new_score = score_model(trained_model=production_model, 
+                            test_data_path=test_data_path)
 
+    print("New score:", new_score)
 
+    # Check for model drift
+    if new_score < latest_score:
+        print("Model drift detected. Proceeding with re-deployment.")
+    else:
+        print("No model drift detected. Ending the process.")
+        sys.exit()  # Exit the script if no model drift is detected
 
 # Re-deployment
 #if you found evidence for model drift, re-run the deployment.py script
@@ -71,6 +97,6 @@ if __name__ == '__main__':
     print("Checking for new data...")
     ingest_new_data()
     print("Checking for model drift...")
-
+    check_for_model_drift()
 
 
