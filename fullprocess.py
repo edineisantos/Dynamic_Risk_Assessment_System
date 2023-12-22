@@ -98,7 +98,6 @@ def retrain_model():
     print("New model deployed.")
 
 # Diagnostics and reporting
-#run diagnostics.py and reporting.py for the re-deployed model
 
 
 if __name__ == '__main__':
