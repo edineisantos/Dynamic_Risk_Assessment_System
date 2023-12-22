@@ -17,7 +17,7 @@ default_output_model_path = config['output_model_path']
 # Function for reporting
 
 
-def score_model(test_data_file=default_test_data_path,
+def reporting_score_model(test_data_file=default_test_data_path,
                 model_predictions_file=None):
     # Use the model_predictions function to get predictions
     if model_predictions_file is None:
