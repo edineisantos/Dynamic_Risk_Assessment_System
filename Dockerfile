@@ -15,7 +15,7 @@ RUN pip install -r requirements.txt
 
 # Install git and cron
 USER root
-RUN apt-get update && apt-get install -y git cron
+RUN apt-get update && apt-get install -y git cron nano
 
 # Expose the ports Jupyter and other services will run on
 EXPOSE 8888
