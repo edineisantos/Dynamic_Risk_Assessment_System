@@ -5,6 +5,8 @@ from ingestion import merge_multiple_dataframe
 from scoring import score_model
 from training import train_model
 from deployment import deploy_model
+from reporting import reporting_score_model
+from apicalls import apicalls
 
 # Load config.json and get environment variables
 with open('config.json', 'r') as f:
@@ -55,8 +57,6 @@ def ingest_new_data():
         print("Terminating process.")
         sys.exit()  # Exit the script if no new data is found
 
-# Checking for model drift
-#check whether the score from the deployed model is different from the score from the model that uses the newest ingested data
 # Function to check for model drift
 def check_for_model_drift():
     # Read the latest recorded score
@@ -83,18 +83,19 @@ def check_for_model_drift():
 
     # Check for model drift
     if new_score < latest_score:
-        print("Model drift detected. Proceeding with re-deployment.")
-
-        print("Training new model...")
-        train_model()
-        print("New model trained.")
-        
-        print("Deploying new model...")
-        deploy_model()
-        print("New model deployed.")
+        print("Model drift detected. Proceeding with re-deployment.")        
     else:
         print("No model drift detected. Ending the process.")
         sys.exit()  # Exit the script if no model drift is detected
+
+def retrain_model():
+    # Retrain the model
+    train_model()
+    print("New model trained.")
+
+    # Deploy the model
+    deploy_model()
+    print("New model deployed.")
 
 # Diagnostics and reporting
 #run diagnostics.py and reporting.py for the re-deployed model
@@ -105,5 +106,13 @@ if __name__ == '__main__':
     ingest_new_data()
     print("Checking for model drift...")
     check_for_model_drift()
+    print("Retraining model...")
+    retrain_model()
+    print("Reporting score model...")
+    reporting_score_model()
+    print("Testing API calls...")
+    apicalls()
+    print("Process completed.")
+
 
 
