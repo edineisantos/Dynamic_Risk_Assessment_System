@@ -3,6 +3,8 @@ import sys
 import json
 from ingestion import merge_multiple_dataframe
 from scoring import score_model
+from training import train_model
+from deployment import deploy_model
 
 # Load config.json and get environment variables
 with open('config.json', 'r') as f:
@@ -82,12 +84,17 @@ def check_for_model_drift():
     # Check for model drift
     if new_score < latest_score:
         print("Model drift detected. Proceeding with re-deployment.")
+
+        print("Training new model...")
+        train_model()
+        print("New model trained.")
+        
+        print("Deploying new model...")
+        deploy_model()
+        print("New model deployed.")
     else:
         print("No model drift detected. Ending the process.")
         sys.exit()  # Exit the script if no model drift is detected
-
-# Re-deployment
-#if you found evidence for model drift, re-run the deployment.py script
 
 # Diagnostics and reporting
 #run diagnostics.py and reporting.py for the re-deployed model
