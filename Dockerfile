@@ -13,9 +13,9 @@ COPY . /home/jovyan/work/Dynamic_Risk_Assessment_System
 # Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
 
-# Install git
+# Install git and cron
 USER root
-RUN apt-get update && apt-get install -y git
+RUN apt-get update && apt-get install -y git cron
 
 # Expose the ports Jupyter and other services will run on
 EXPOSE 8888
