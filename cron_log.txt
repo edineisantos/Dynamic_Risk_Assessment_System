@@ -1,0 +1,40 @@
+Fri Dec 22 15:50:01 UTC 2023
+Checking for new data...
+Files that have been ingested:
+{'dataset3.csv', 'dataset4.csv'}
+All files in the input folder:
+['dataset3.csv', 'dataset4.csv']
+No new data found.
+Terminating process.
+Fri Dec 22 16:00:01 UTC 2023
+Checking for new data...
+Files that have been ingested:
+{'dataset4.csv', 'dataset3.csv'}
+All files in the input folder:
+['dataset3.csv', 'dataset4.csv']
+No new data found.
+Terminating process.
+Fri Dec 22 16:10:01 UTC 2023
+Checking for new data...
+Files that have been ingested:
+{'dataset4.csv', 'dataset3.csv'}
+All files in the input folder:
+['dataset3.csv', 'dataset4.csv']
+No new data found.
+Terminating process.
+Fri Dec 22 16:20:01 UTC 2023
+Checking for new data...
+Files that have been ingested:
+{'dataset4.csv', 'dataset3.csv'}
+All files in the input folder:
+['dataset3.csv', 'dataset4.csv']
+No new data found.
+Terminating process.
+Fri Dec 22 16:30:01 UTC 2023
+Checking for new data...
+Files that have been ingested:
+{'dataset3.csv', 'dataset4.csv'}
+All files in the input folder:
+['dataset3.csv', 'dataset4.csv']
+No new data found.
+Terminating process.
